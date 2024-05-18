@@ -3,7 +3,7 @@
 resource "aws_vpc" "nti_vpc" {
   cidr_block = var.vpc_cidr
   tags = {
-    Name = "nti-vpc"
+    Name = "nti-vpc1"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "public_subnet" {
   availability_zone= var.availability_zone   
   
   tags = {
-    Name = "pub-subnet"
+    Name = "pub-subnet1"
   }
 }
 
@@ -26,7 +26,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.nti_vpc.id
 
   tags = {
-    Name = "nti-igw"
+    Name = "nti-igw1"
   }
 }
 
@@ -41,7 +41,7 @@ resource "aws_route_table" "pub-route-table" {
   }
 
   tags = {
-    Name = "route-public-table "
+    Name = "route-public-table1 "
   }
 }
 
@@ -80,6 +80,6 @@ resource "aws_security_group" "sg" {
     cidr_blocks = [var.cidr_all]
   }
   tags = {
-    Name = "nti-sg"
+    Name = "nti-sg-1"
   }
 }
