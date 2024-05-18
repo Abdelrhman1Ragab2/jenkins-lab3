@@ -1,5 +1,5 @@
 ---
-- name: Install Jenkins and Docker
+- name: Install nginx
   hosts: nginx
   vars:
     ansible_become_password: ""
