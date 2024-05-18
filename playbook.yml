@@ -1,6 +1,9 @@
 ---
 - name: Install Jenkins and Docker
   hosts: nginx
+  vars:
+    ansible_become_password: ""
+    ansible_user: 'ubuntu'
   become: true
 
   tasks:
