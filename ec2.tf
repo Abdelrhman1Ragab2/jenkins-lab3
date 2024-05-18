@@ -14,13 +14,12 @@ resource "aws_instance" "nginx" {
   }
 }
 
-resource "local_file" "name" {
-  filename = "./inv.ini"
-  content = 
-  """
+resource "local_file" "inventory" {
+  filename = "./inventory.ini"
+  content = <<-EOT
   [nginx]
   ${aws_instance.nginx.public_ip}
-  
-  """
+  EOT
+}
   
 }
