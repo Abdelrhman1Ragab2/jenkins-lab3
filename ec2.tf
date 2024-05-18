@@ -22,4 +22,3 @@ resource "local_file" "inventory" {
   EOT
 }
   
-}
