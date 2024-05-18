@@ -18,7 +18,7 @@ pipeline {
         stage('Apply Ansible Playbook') {
              steps {
   
-                sshagent(['ssh-remote-machine']) {
+                sshagent(['ec2-user']) {
                      sh "ansible-playbook -i inventory.ini playbook.yml"
 
                 }
