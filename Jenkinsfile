@@ -19,7 +19,7 @@ pipeline {
              steps {
   
                 sshagent(['ssh-1']) {
-                       sh "ssh -o StrictHostKeyChecking=no ec2-user@ip echo hello"
+                       sh "ssh -o StrictHostKeyChecking=no ec2-user@18.200.236.142 echo hello"
 
                 }
             }
