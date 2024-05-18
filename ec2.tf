@@ -23,7 +23,6 @@ resource "local_file" "inventory" {
   content = <<-EOT
   [nginx]
   ${aws_instance.nginx.public_ip} 
-  ansible_user= ubuntu
   EOT
 }
   
