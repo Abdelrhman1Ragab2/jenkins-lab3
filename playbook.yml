@@ -1,0 +1,29 @@
+---
+- name: Install Jenkins and Docker
+  hosts: nginx
+  become: true
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+      register: apt_update
+
+    - name: Install java
+      apt:
+        name: default-jre
+        state: present
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+  
+    - name: Start Jenkins service
+      service:
+        name: ngnix
+        state: started
+        enabled: yes
+
+    
