@@ -14,6 +14,16 @@ pipeline {
                 sh 'terraform apply -auto-approve'
             }
         }
+
+        stage('Apply Ansible Playbook') {
+             steps {
+  
+                sshagent(['ssh-1']) {
+                       sh "ssh -o StrictHostKeyChecking=no ec2-user@ip echo hello"
+
+                }
+            }
+        }
         
         stage('Apply Ansible Playbook') {
              steps {
