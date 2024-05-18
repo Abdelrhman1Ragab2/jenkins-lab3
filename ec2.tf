@@ -22,7 +22,7 @@ resource "local_file" "inventory" {
   filename = "./inventory.ini"
   content = <<-EOT
   [nginx]
-  ${aws_instance.nginx.public_ip}
+  ${aws_instance.nginx.public_ip} ansible_user= ubuntu
   EOT
 }
   
