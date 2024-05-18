@@ -18,7 +18,7 @@ pipeline {
         stage('Apply Ansible Playbook') {
              steps {
   
-                sshagent(['ec2-user']) {
+                sshagent(['ssh']) {
                      sh "ansible-playbook -i inventory.ini playbook.yml"
 
                 }
