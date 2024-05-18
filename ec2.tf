@@ -1,4 +1,8 @@
-
+provider "aws" {
+  region = "eu-west-1]"
+  access_key = "AKIAQ3EGS4SFNAR43HLJ"
+  secret_key = "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"
+}
 resource "aws_instance" "nginx" {
   ami = var.ec2_ami
   instance_type = var.ec2_type
