@@ -19,7 +19,7 @@ pipeline {
              steps {
   
                 sshagent(['ssh-remote-machine']) {
-                     sh "ansible-playbook -i inv.ini playbook.yml"
+                     sh "ansible-playbook -i inventory.ini playbook.yml"
 
                 }
             }
