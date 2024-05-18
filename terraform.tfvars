@@ -1,6 +1,6 @@
 
-vpc_cidr ="10.0.0.0/16"
-pub_sub_cidr ="10.0.0.0/24"
+vpc_cidr ="10.1.0.0/16"
+pub_sub_cidr ="10.1.0.0/24"
 cidr_all ="0.0.0.0/0"
 
 availability_zone = "eu-west-1a"
