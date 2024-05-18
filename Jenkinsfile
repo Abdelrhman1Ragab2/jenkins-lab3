@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Apply Ansible Playbook') {
+        stage('check ssh') {
              steps {
   
                 sshagent(['ssh-1']) {
