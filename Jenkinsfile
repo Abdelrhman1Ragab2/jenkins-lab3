@@ -1,5 +1,5 @@
 pipeline {
-    agent {label helper-terraform-ansible}
+    agent {label 'helper-terraform-ansible'}
     
     stages {
         stage('Apply Terraform') {
