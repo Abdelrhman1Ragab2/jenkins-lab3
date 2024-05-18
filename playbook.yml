@@ -25,7 +25,7 @@
   
     - name: Start Jenkins service
       service:
-        name: ngnix
+        name: nginx
         state: started
         enabled: yes
 
